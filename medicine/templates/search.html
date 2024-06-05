@@ -1,0 +1,23 @@
+{% extends 'layout/app-layout.html' %}
+
+{% block 'content' %}
+    <h2>Search Results</h2>
+    {% if medicines %}
+        <table>
+            <tr>
+                <th>Name:</th>
+                <th>Quantity:</th>
+            </tr>
+            {% for medicine in medicines %}
+                <tr>
+                    <td>{{ medicine.MedicineName }}</td>
+                    <td>{{ medicine.Description }}</td>
+                    <td>{{ medicine.ExpiryDate }}</td>
+                    <td>{{ medicine.Price }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+{% endblock %}

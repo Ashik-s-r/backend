@@ -1,0 +1,30 @@
+
+{% extends 'layout/app-layout.html' %}
+{%block 'content'%}
+  <title>Welcome to Our Medical Store</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Medical Store</h1>
+    </header>
+    <main>
+        <form method="GET" action="{% url 'search_medicine' %}">
+            <input type="text" name="query" placeholder="Search by Medicine Name">
+            <button type="submit">Search</button>
+        </form>
+    
+    
+
+
+        <p>Explore our categories:</p>
+        <ul>
+            <li><a href="#">Medicines</a></li>
+            <li><a href="#">Medical Devices</a></li>
+            <li><a href="#">Health Supplements</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>Contact us: ajincosta@example.com</p>
+    </footer>
+    {% endblock%}
+

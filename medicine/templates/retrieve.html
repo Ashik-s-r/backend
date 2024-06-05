@@ -1,0 +1,24 @@
+{%extends 'layout/app-layout.html'%}
+{%block 'content'%}
+<h1>Retrieve Products</h1>
+<table border="1">
+    <tr><th>medicine_id</th>
+        <th>medicine_name</th>
+        <th>medicine_description</th>
+        <th>medicine_expirydate</th>
+        <th>medicine_price</th>
+        <th colspan="2" style="text-align: center;">actions</th>
+    </tr>
+        {%for x in list%}
+    <tr>
+    <td>{{x.id}}</td>
+    <td>{{ x.MedicineName }} </td> 
+    <td>{{ x.Description}}</td>
+    <td>{{ x.ExpiryDate}}</td>
+    <td>{{ x.Price}}</td>
+    <td ><a href="{%url 'update1' x.id %}" class="btn btn-success" value="edit" type="submit">Edit</a></td>
+    <td><a href="{%url 'delete1' x.id %}" class="btn btn-success" value="edit" type="submit">Delete</a></td></tr>
+     {% endfor %}
+    </table> 
+
+{%endblock%}

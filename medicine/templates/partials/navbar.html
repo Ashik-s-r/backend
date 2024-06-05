@@ -1,0 +1,28 @@
+<style>
+    nav {
+        background-color: #333; /* Background color of the navbar */
+        overflow: hidden;
+    }
+
+    nav a {
+        float: left;
+        display: block;
+        color: white; /* Text color of navbar links */
+        text-align: center;
+        padding: 14px 16px; /* Padding around the links */
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: #ddd; /* Background color of navbar links on hover */
+        color: black; /* Text color of navbar links on hover */
+    }
+</style>
+
+<nav>
+    <a href="{% url 'home1' %}">Home</a>
+    <a href="{% url 'signup' %}">Signup</a>
+    <a href="{% url 'login' %}">LogIn</a>
+    <a href="{% url 'create' %}">add Medicines</a>
+    <a href="{% url 'read' %}">read</a>
+</nav>
